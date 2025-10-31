@@ -120,6 +120,7 @@ variable "sns_topic_lambda_feedback_sample_rate" {
 variable "slack_webhook_url" {
   description = "The URL of Slack webhook"
   type        = string
+  sensitive   = true
 }
 
 variable "slack_channel" {
@@ -268,4 +269,10 @@ variable "subscription_filter_policy_scope" {
   description = "(Optional) A valid filter policy scope MessageAttributes|MessageBody"
   type        = string
   default     = null
+}
+
+variable "runtime" {
+  description = "runtime lambda"
+  type        = string
+  default     = "python3.13"
 }
