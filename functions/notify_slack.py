@@ -19,7 +19,7 @@ from urllib.error import HTTPError
 import boto3
 
 # Set default region if not provided
-REGION = os.environ.get("AWS_REGION", "us-east-1")
+REGION = os.environ.get("AWS_REGION", "eu-west-3")
 
 # Create client so its cached/frozen between invocations
 KMS_CLIENT = boto3.client("kms", region_name=REGION)
